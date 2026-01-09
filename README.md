@@ -1,7 +1,7 @@
 # 🎬 PickIt - Ultimate Movie & TV Show Discovery App
 
 <div align="center">
-  <img src="https://i.ibb.co/DPRLTsk2/Pickit-Logo.jpg" alt="PickIt Logo" width="1080" height="1080" style="border-radius: 100px;">
+  <img src="https://i.postimg.cc/7Yk3Tf3R/PICK_IT.jpg" alt="PickIt Logo" width="1080" height="1080" style="border-radius: 100px;">
   <br>
   <h3><b>PickIt</b> is a modern, cutting-edge Android application built to help users discover, search, and track their favorite Movies and TV Shows.</h3>
 </div>
