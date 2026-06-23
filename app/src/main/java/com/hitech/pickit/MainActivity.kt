@@ -29,22 +29,6 @@ class MainActivity : AppCompatActivity() {
         setContent {
             PickItTheme {
                 MyApp()
-
-//                MainOnboardingFlow(onFinish = {})
-
-//                Scaffold(
-//                    Modifier.fillMaxSize(),
-//                    containerColor = MaterialTheme.colorScheme.surface
-//                ) { innerPadding ->
-//                    Box(
-//                        modifier = Modifier
-//                            .fillMaxSize()
-//                            .padding(innerPadding), contentAlignment = Alignment.Center
-//                    ) {
-//
-//                    }
-//                }
-
             }
         }
     }
