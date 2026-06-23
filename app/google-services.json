@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "701752497738",
-    "project_id": "pickit-f3ea8",
-    "storage_bucket": "pickit-f3ea8.firebasestorage.app"
+    "project_number": "892191703578",
+    "project_id": "pick-it-rowad",
+    "storage_bucket": "pick-it-rowad.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:701752497738:android:a0a0cdf56b3be98925b8b3",
+        "mobilesdk_app_id": "1:892191703578:android:6c61705932d6ccb9a187a3",
         "android_client_info": {
           "package_name": "com.hitech.pickit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "701752497738-12dn18s5onu5gaanspe8ske89nkurrs5.apps.googleusercontent.com",
+          "client_id": "892191703578-b863jvdohhihhffi337rjsvn2gkfmqni.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.hitech.pickit",
-            "certificate_hash": "daf4a1d91a97bbe1db68bd0760daae7c0d762410"
+            "certificate_hash": "2bf54c97f4525d328e8b13d9d0effbfd74cc48fe"
           }
         },
         {
-          "client_id": "701752497738-57leg22ugvn2qmrnr9aoqudmn304ncm2.apps.googleusercontent.com",
+          "client_id": "892191703578-c3q622l24vcj6etls50fs8d44u1m4gvu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9PkcpxNaPBKK5L9j1Fk64ZPvmKgkHZm4"
+          "current_key": "AIzaSyBq2osv5aQmzq7Ev6Hs_odufIG0Qrp3dbA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "701752497738-57leg22ugvn2qmrnr9aoqudmn304ncm2.apps.googleusercontent.com",
+              "client_id": "892191703578-c3q622l24vcj6etls50fs8d44u1m4gvu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

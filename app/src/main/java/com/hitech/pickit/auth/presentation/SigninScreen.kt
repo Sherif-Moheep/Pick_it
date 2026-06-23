@@ -40,7 +40,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.hitech.pickit.R
-import com.hitech.pickit.ui.theme.PickItTheme
+import com.hitech.pickit.core.presentation.theme.PickItTheme
 
 @Composable
 fun SignInScreen(

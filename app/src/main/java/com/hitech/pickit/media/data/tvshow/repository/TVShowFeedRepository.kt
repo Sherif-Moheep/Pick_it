@@ -1,0 +1,34 @@
+package com.hitech.pickit.media.data.tvshow.repository
+
+import com.hitech.pickit.R
+import com.hitech.pickit.core.di.IoDispatcher
+import com.hitech.pickit.media.domain.repository.BaseFeedRepository
+import com.hitech.pickit.media.data.datasource.remote.api.TVShowService
+import com.hitech.pickit.media.data.datasource.remote.mappers.asTVShowDomainModel
+import com.hitech.pickit.media.domain.model.TVShow
+import kotlinx.coroutines.CoroutineDispatcher
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class TVShowFeedRepository @Inject constructor(
+    //@ApplicationContext context: Context,
+    @IoDispatcher ioDispatcher: CoroutineDispatcher,
+    private val tvShowApi: TVShowService,
+) : BaseFeedRepository<TVShow>(ioDispatcher) {
+    override suspend fun popularItems(): List<TVShow> = tvShowApi.popularTVSeries().items.asTVShowDomainModel()
+
+    override suspend fun latestItems(): List<TVShow> = tvShowApi.onTheAirTVSeries().items.asTVShowDomainModel()
+
+    override suspend fun topRatedItems(): List<TVShow> = tvShowApi.topRatedTVSeries().items.asTVShowDomainModel()
+
+    override suspend fun trendingItems(): List<TVShow> = tvShowApi.trendingTVSeries().items.asTVShowDomainModel()
+
+    override suspend fun nowPlayingItems(): List<TVShow> = tvShowApi.airingTodayTVSeries().items.asTVShowDomainModel()
+
+    override suspend fun discoverItems(): List<TVShow> = tvShowApi.discoverTVSeries().items.asTVShowDomainModel()
+
+    override fun getNowPlayingResId(): Int = R.string.text_airing_today
+
+    override fun getLatestResId(): Int = R.string.text_on_the_air
+}
