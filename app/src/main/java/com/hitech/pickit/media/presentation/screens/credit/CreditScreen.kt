@@ -8,11 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
 import com.hitech.pickit.media.presentation.models.Actor
 import com.hitech.pickit.media.presentation.models.Credit
-import com.hitech.pickit.media.presentation.utili.Spacing
-import com.hitech.pickit.media.presentation.utili.TMDbSpacer
-import com.hitech.pickit.media.presentation.utili.components.PersonCard
-import com.hitech.pickit.media.presentation.utili.fullSpanGridItem
-import com.hitech.pickit.media.presentation.utili.navigationBarPadding
+import com.hitech.pickit.media.presentation.util.Spacing
+import com.hitech.pickit.media.presentation.util.TMDbSpacer
+import com.hitech.pickit.media.presentation.util.components.PersonCard
+import com.hitech.pickit.media.presentation.util.fullSpanGridItem
+import com.hitech.pickit.media.presentation.util.navigationBarPadding
 @Composable
 fun CreditScreen(
     @StringRes resourceId: Int,

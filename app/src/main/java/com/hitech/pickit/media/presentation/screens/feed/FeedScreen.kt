@@ -52,10 +52,10 @@ import com.hitech.pickit.core.presentation.theme.PickItTheme
 import com.hitech.pickit.media.presentation.models.Content
 import com.hitech.pickit.media.presentation.models.TMDbItem
 import com.hitech.pickit.media.presentation.screens.feed.utils.pagerTransition
-import com.hitech.pickit.media.presentation.utili.Spacing
-import com.hitech.pickit.media.presentation.utili.TMDbSpacer
-import com.hitech.pickit.media.presentation.utili.components.DestinationBar
-import com.hitech.pickit.media.presentation.utili.components.TMDbCard
+import com.hitech.pickit.media.presentation.util.Spacing
+import com.hitech.pickit.media.presentation.util.TMDbSpacer
+import com.hitech.pickit.media.presentation.util.components.DestinationBar
+import com.hitech.pickit.media.presentation.util.components.TMDbCard
 import com.hitech.pickit.navigation.MainDestinations.TMDB_AIRING_TODAY_TV_SHOW_ROUTE
 import com.hitech.pickit.navigation.MainDestinations.TMDB_DISCOVER_MOVIES_ROUTE
 import com.hitech.pickit.navigation.MainDestinations.TMDB_DISCOVER_TV_SHOW_ROUTE

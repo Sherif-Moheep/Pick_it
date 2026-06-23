@@ -121,10 +121,10 @@ import com.hitech.pickit.media.presentation.models.Credit
 import com.hitech.pickit.media.presentation.models.TMDbItem
 import com.hitech.pickit.media.presentation.models.toDisplayableNumber
 import com.hitech.pickit.media.presentation.screens.detail_screen.utils.openInChromeCustomTab
-import com.hitech.pickit.media.presentation.utili.Spacing
-import com.hitech.pickit.media.presentation.utili.components.PersonCard
-import com.hitech.pickit.media.presentation.utili.components.TMDbCard
-import com.hitech.pickit.media.presentation.utili.dpToPx
+import com.hitech.pickit.media.presentation.util.Spacing
+import com.hitech.pickit.media.presentation.util.components.PersonCard
+import com.hitech.pickit.media.presentation.util.components.TMDbCard
+import com.hitech.pickit.media.presentation.util.dpToPx
 import com.hitech.pickit.navigation.MainDestinations
 import com.hitech.pickit.navigation.MainDestinations.TMDB_IMAGES_ROUTE
 

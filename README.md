@@ -1,7 +1,7 @@
 # 🎬 PickIt - Ultimate Movie & TV Show Discovery App
 
 <div align="center">
-  <img src="https://i.postimg.cc/7Yk3Tf3R/PICK_IT.jpg" alt="PickIt Logo" width="1080" height="1080" style="border-radius: 100px;">
+  <img src="Screenshots/logo.png" alt="PickIt Logo" width="256" style="border-radius: 100px;">
   <br>
   <h3><b>PickIt</b> is a modern, cutting-edge Android application built to help users discover, search, and track their favorite Movies and TV Shows.</h3>
 </div>
@@ -21,12 +21,22 @@ Built with **Kotlin** and **Jetpack Compose**, it leverages the power of **The M
 * **🏎️ Performance:** Heavy use of **Coroutines** & **Flow** for asynchronous operations.
 * **🎨 Dynamic Theming:** Extracts vibrant colors from movie posters to theme the details screen using **Palette API**.
 * **👋 Onboarding:** A welcoming onboarding flow using **DataStore** to persist state.
+---
+
 
 ## 📸 Screenshots
+| Feature / Screen |                                   Light Mode                                    | Dark Mode |
+| :--- |:-------------------------------------------------------------------------------:| :---: |
+| **Onboarding & Auth** <br> First-launch experience and secure user authentication. | <img src="Screenshots/onboarding_light.png" width="250" alt="Onboarding Light"> | <img src="Screenshots/onboarding_dark.png" width="250" alt="Onboarding Dark"> |
+| **Home & Discovery** <br> Personalized movie and TV show recommendations. |   <img src="Screenshots/home_light.png" width="250" alt="Home Screen Light">    | <img src="Screenshots/home_dark.png" width="250" alt="Home Screen Dark"> |
+| **Favorites (Bookmarks)** <br> Real-time user saved list synchronized with Cloud Firestore. |  <img src="Screenshots/favorites_light.png" width="250" alt="Favorites Light">  | <img src="Screenshots/favorites_dark.png" width="250" alt="Favorites Dark"> |
+| **Media Details** <br> Deep-dive views featuring cast lists, summaries, and ratings. |    <img src="Screenshots/details_light.png" width="250" alt="Details Light">    | <img src="Screenshots/details_dark.png" width="250" alt="Details Dark"> |
+| **User Profile & Settings** <br> Personal preferences, language switching, and account data. |    <img src="Screenshots/profile_light.png" width="250" alt="Profile Light">    | <img src="Screenshots/profile_dark.png" width="250" alt="Profile Dark"> |
 
-| Home Feed | Movie Details | Favorites | Profile |
-|:---------:|:-------------:|:------------:|:---------:|
-| <img src="https://i.postimg.cc/Zqm8gjZC/Screenshot-2025-12-02-15-04-29-96-10768d4acf76279a75a33c237ab36c7f.jpg" width="200"/> | <img src="https://i.postimg.cc/k41W2mSR/Screenshot-2025-12-02-15-05-49-92-10768d4acf76279a75a33c237ab36c7f.jpg" width="200"/> | <img src="https://i.postimg.cc/q7rsYQ0y/Screenshot_2025_12_02_15_04_59_17_10768d4acf76279a75a33c237ab36c7f.jpg" width="200"/> | <img src="https://i.postimg.cc/Fz6bB4FM/Screenshot-2025-12-02-15-03-36-51-10768d4acf76279a75a33c237ab36c7f.jpg" width="200"/> |
+
+---
+
+
 ## 🛠️ Tech Stack & Libraries
 
 * **Language:** [Kotlin](https://kotlinlang.org/) (100%)
@@ -35,7 +45,7 @@ Built with **Kotlin** and **Jetpack Compose**, it leverages the power of **The M
 * **Dependency Injection:** [Dagger Hilt](https://dagger.dev/hilt/).
 * **Network:** [Retrofit](https://square.github.io/retrofit/) + [OkHttp](https://square.github.io/okhttp/).
 * **Serialization:** [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization) (Type-safe JSON parsing).
-* **Local Database:** [Room](https://developer.android.com/training/data-storage/room).
+* **Backend & Data Storage:** [Firebase](https://firebase.google.com/) (Authentication & Firestore/Realtime Database for user sync).
 * **Image Loading:** [Coil](https://coil-kt.github.io/coil/).
 * **Pagination:** [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3).
 * **Async:** Coroutines & StateFlow.
@@ -44,84 +54,104 @@ Built with **Kotlin** and **Jetpack Compose**, it leverages the power of **The M
 * **Browser:** Chrome Custom Tabs.
 * **Animations:** Lottie Files & Compose Animation API.
 
-## 🏗️ Architecture Overview
+--- 
 
-The app follows the **Clean Architecture** guidelines:
 
-1.  **Domain Layer:** Contains UseCases, Domain Models, and Repository Interfaces. It is pure Kotlin and has no Android dependencies.
-2.  **Data Layer:** Contains API implementation (Retrofit), Database (Room), DTOs, and Repository Implementations. Maps data to Domain models.
-3.  **Presentation Layer:** Contains UI (Compose Screens) and ViewModels.
+## 🏗️ Architecture & Project Structure
 
-### Package Structure
+The project is built using **Clean Architecture** principles structured inside a **package-by-feature** layout. This organizes the codebase around distinct business functionalities rather than technical layers, making the code much easier to navigate and maintain as it grows.
+### The Architectural Layers:
+1. **Domain Layer:** Contains pure Kotlin business logic (UseCases, Domain Models, and Repository Interfaces). It is completely isolated and has zero Android framework dependencies.
+2. **Data Layer:** Handles data retrieval and persistence. Contains Retrofit API services, Room Database entities/DAOs, Data Transfer Objects (DTOs), and concrete Repository implementations that map raw data down to Domain models.
+3. **Presentation Layer:** Manages UI states and user interaction using Jetpack Compose Screens and state-holding ViewModels.
+
+### Package Topology:
+
+```text
 com.hitech.pickit
-
-├── core # Core components (Base Classes, Common Repositories)
-
-├── di # Hilt Modules (Network, Database, Repository Bindings)
-
-├── movie # Feature Module (Movies & TV Shows)
-
-│     │
-
-│     ├── data # API, DTOs, PagingSource, Mappers, Repository Impl 
-
-│     │ 
-
-│     ├── domain # Models, Repository Interfaces, UseCases 
-
-│     │ 
-
-│     └── presentation # UI Screens, ViewModels, Components
-
-│   
-└── ui # App Entry Point, Navigation, Theme
-
+│   MainActivity.kt                 # App entry point hosting Compose NavHost
+│   PickItApplication.kt            # Hilt Application class establishing dependency container
+│
+├── auth                            # Authentication Feature Module (Data, Domain, Presentation)
+│   ├── data                        # Mappers, Firebase Auth Repository implementations
+│   ├── di                          # Hilt Auth dependency injection modules
+│   ├── domain                      # Auth Models & Repository interfaces
+│   └── presentation                # Auth Compose UI screens & state-holding ViewModels
+│
+├── core                            # Shared cross-cutting components & infrastructure
+│   ├── data                        # Centralized Room DB configurations & Retrofit client boilerplate
+│   ├── di                          # Global Hilt modules (Network, Database, Coroutine Dispatchers)
+│   ├── domain                      # Universal error handling paradigms & generic Result wrappers
+│   └── presentation                # Global design system theme (Color, Type) & UI utilities
+│
+├── media                           # Primary Feature Module (Movies, TV Shows & Actors)
+│   ├── data                        # TMDB API Endpoints, DTO response parsing, and Paging 3 Sources
+│   ├── di                          # Media-scoped Hilt modules
+│   ├── domain                      # Core business models & repository abstraction contracts
+│   └── presentation                # Screen UI layouts, parameter-safe navigation graphs, and BaseViewModels
+│
+├── navigation                      # Global orchestration layer
+│   └── presentation                # Persistent Bottom App Bar components & Master Navigation Graph
+│
+├── onboarding                      # App first-launch interactive walkthrough
+│   ├── data                        # Jetpack DataStore configurations for state persistence
+│   └── presentation                # Pager layout flows & introductory user screens
+│
+└── profile                         # User Personalization & Local Settings Engine
+    ├── data                        # Preference tracking endpoints (App-wide Theme/Language state)
+    ├── di                          # Settings-scoped injection graphs
+    ├── domain                      # Focused single-task UseCases (GetLanguageUseCase, SetAppThemeUseCase)
+    └── presentation                # Preferences configuration UI & reactive ProfileViewModels
+```
+---
 
 ## 🚀 Getting Started
 
-To run this project locally, follow these steps:
+Follow these steps to set up the project locally on your machine.
 
-### 1. Clone the repository
-git clone [https://github.com/Robert-x1/Pick_it.git](https://github.com/Robert-x1/Pick_it.git)
+### Prerequisites
 
-2. Get a TMDB API Key
-Sign up at The Movie Database.
+* **Android Studio** (Ladybug or newer recommended)
+* **JDK 17+**
+* A **TMDB (The Movie Database)** Account
 
-Navigate to Settings -> API to generate your API Read Access Token (Bearer Token).
+---
 
-3. Configure local.properties
-Create a file named local.properties in the root directory (if not exists) and add your token:
+### Setup Instructions
 
-Properties
+1. **Clone the Repository** 
+   * Clone the main repository or your fork using the terminal:
+   * git clone [https://github.com/Sherif-Moheep/Pick_it.git](https://github.com/Sherif-Moheep/Pick_it.git)
+   * cd Pick_it
+2. **Obtain a TMDB API Token** 
+   * Sign up or log in at The Movie Database (TMDB).
+   * Navigate to Account Settings > API from your profile menu.
+   * Generate a new API key and copy the API Read Access Token (Bearer Token).
 
-sdk.dir=/path/to/your/android/sdk
-TMDB_BEARER_TOKEN="YOUR_TMDB_READ_ACCESS_TOKEN_HERE"
-(Note: Ensure TMDB_BEARER_TOKEN is the exact key used in build.gradle.kts).
 
-4. Build and Run
-Open the project in Android Studio, sync Gradle, and run the app on an Emulator or Physical device.
+3. **Configure Secrets** `[local.properties]`
+   Open or create the local.properties file in your project's root directory and add your bearer token enclosed in quotation marks:
+   TMDB_BEARER_TOKEN="YOUR_TMDB_READ_ACCESS_TOKEN_HERE"
+> ⚠️ Security Note: local.properties is included in .gitignore by default. Never commit your actual API token to a public repository.
 
-🤝 Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-Fork the Project
+4. **Build and Run** `[Android Studio]`
+   * Open Android Studio and choose Open Existing Project, selecting the cloned root folder.
+   * Wait for the IDE to finish indexing, then click Sync Project with Gradle Files.
+   * Select an emulator or connected physical device and press Run (Shift + F10).
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-Push to the Branch (git push origin feature/AmazingFeature)
+---
 
-Open a Pull Request
+## 👥 The Team
 
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
+This project was developed as a graduation capstone by:
 
-👨‍💻 Contact
-Robert Romany - Android Developer
+* **Sherif Moheep** - [GitHub Profile Link](https://github.com/Sherif-Moheep)
+* **Robert Romany** - [GitHub Profile Link](https://github.com/RobertRomany)
+* **Mokhtar Mohamed** - [GitHub Profile Link]()
+* **Hussain Mustafa** - [GitHub Profile Link](https://github.com/Hassien12)
+* **Osama Mohamed** - [GitHub Profile Link](https://github.com/EngOsamaMohamed)
 
-📧 Email: robert.romany.dev@gmail.com
-
-🔗 LinkedIn: linkedin.com/in/robert-romany-dev
-
-Project Link: https://github.com/Robert-x1/Pick_it.git
+---

@@ -35,11 +35,11 @@ import androidx.navigation.NavController
 import com.hitech.pickit.R
 import com.hitech.pickit.media.presentation.models.TMDbItem
 import com.hitech.pickit.media.presentation.screens.paging.PagingScreen
-import com.hitech.pickit.media.presentation.screens.seachScreen.components.DeclarativeItems
-import com.hitech.pickit.media.presentation.screens.seachScreen.components.RecentSearches
-import com.hitech.pickit.media.presentation.screens.seachScreen.components.SearchBar
-import com.hitech.pickit.media.presentation.screens.seachScreen.components.SearchData
-import com.hitech.pickit.media.presentation.utili.components.TMDbDivider
+import com.hitech.pickit.media.presentation.screens.searchScreen.components.DeclarativeItems
+import com.hitech.pickit.media.presentation.screens.searchScreen.components.RecentSearches
+import com.hitech.pickit.media.presentation.screens.searchScreen.components.SearchBar
+import com.hitech.pickit.media.presentation.screens.searchScreen.components.SearchData
+import com.hitech.pickit.media.presentation.util.components.TMDbDivider
 import com.hitech.pickit.navigation.MainDestinations.TMDB_MOVIE_DETAIL_ROUTE
 import com.hitech.pickit.navigation.MainDestinations.TMDB_TV_SHOW_DETAIL_ROUTE
 

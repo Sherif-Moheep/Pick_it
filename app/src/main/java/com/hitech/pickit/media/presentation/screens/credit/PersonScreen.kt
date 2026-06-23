@@ -60,7 +60,7 @@ import com.hitech.pickit.R
 import com.hitech.pickit.media.domain.model.Person
 import com.hitech.pickit.core.presentation.theme.PickItTheme
 import com.hitech.pickit.media.presentation.models.Content
-import com.hitech.pickit.media.presentation.utili.Spacing
+import com.hitech.pickit.media.presentation.util.Spacing
 import kotlin.math.max
 import kotlin.math.min
 

@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.hitech.pickit.media.domain.model.TVShow
-import com.hitech.pickit.media.presentation.utili.db_converters.Converters
+import com.hitech.pickit.media.presentation.util.db_converters.Converters
 
 @Entity(tableName = "TVShows")
 @TypeConverters(Converters::class)

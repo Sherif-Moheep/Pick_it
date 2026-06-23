@@ -29,13 +29,13 @@ import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.hitech.pickit.R
 import com.hitech.pickit.media.presentation.models.TMDbItem
-import com.hitech.pickit.media.presentation.utili.Spacing
-import com.hitech.pickit.media.presentation.utili.TMDbSpacer
-import com.hitech.pickit.media.presentation.utili.components.ErrorScreen
-import com.hitech.pickit.media.presentation.utili.components.LoadingRow
-import com.hitech.pickit.media.presentation.utili.components.TMDbContent
-import com.hitech.pickit.media.presentation.utili.fullSpanGridItem
-import com.hitech.pickit.media.presentation.utili.navigationBarPadding
+import com.hitech.pickit.media.presentation.util.Spacing
+import com.hitech.pickit.media.presentation.util.TMDbSpacer
+import com.hitech.pickit.media.presentation.util.components.ErrorScreen
+import com.hitech.pickit.media.presentation.util.components.LoadingRow
+import com.hitech.pickit.media.presentation.util.components.TMDbContent
+import com.hitech.pickit.media.presentation.util.fullSpanGridItem
+import com.hitech.pickit.media.presentation.util.navigationBarPadding
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

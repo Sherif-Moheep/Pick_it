@@ -23,7 +23,7 @@ import com.hitech.pickit.media.presentation.screens.BOOK_list.components.MoviePr
 import com.hitech.pickit.media.presentation.screens.cinemas_screen.components.CinemaSelectorUI
 import com.hitech.pickit.media.presentation.screens.cinemas_screen.components.MoviesLazyRow
 import com.hitech.pickit.media.presentation.screens.cinemas_screen.components.WeekCalendarRow
-import com.hitech.pickit.media.presentation.utili.MovieState
+import com.hitech.pickit.media.presentation.util.MovieState
 
 @Composable
 fun CinemasScreen(modifier: Modifier = Modifier) {

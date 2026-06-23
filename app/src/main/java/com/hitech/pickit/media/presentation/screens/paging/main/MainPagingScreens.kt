@@ -23,7 +23,7 @@ import com.hitech.pickit.media.presentation.screens.paging.main.tvshow.PopularTv
 import com.hitech.pickit.media.presentation.screens.paging.main.tvshow.SimilarTvSeriesViewModel
 import com.hitech.pickit.media.presentation.screens.paging.main.tvshow.TopRatedTvSeriesViewModel
 import com.hitech.pickit.media.presentation.screens.paging.main.tvshow.TrendingTvSeriesViewModel
-import com.hitech.pickit.media.presentation.utili.components.DestinationBar
+import com.hitech.pickit.media.presentation.util.components.DestinationBar
 import com.hitech.pickit.navigation.MainDestinations.TMDB_MOVIE_DETAIL_ROUTE
 import com.hitech.pickit.navigation.MainDestinations.TMDB_SEARCH_MOVIE_ROUTE
 import com.hitech.pickit.navigation.MainDestinations.TMDB_SEARCH_TV_SHOW_ROUTE

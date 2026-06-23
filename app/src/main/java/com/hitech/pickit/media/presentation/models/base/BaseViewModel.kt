@@ -3,7 +3,7 @@ package com.hitech.pickit.media.presentation.models.base
 import com.hitech.pickit.core.domain.utils.Result
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hitech.pickit.media.presentation.utili.UiState
+import com.hitech.pickit.media.presentation.util.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map

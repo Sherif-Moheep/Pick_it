@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.hitech.pickit.R.string.no_data_found
 import com.hitech.pickit.media.presentation.screens.paging.NoDataFoundAnimation
-import com.hitech.pickit.media.presentation.utili.Spacing
+import com.hitech.pickit.media.presentation.util.Spacing
 
 @Composable
 fun EmptyScreen(

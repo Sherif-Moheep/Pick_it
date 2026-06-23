@@ -3,7 +3,6 @@ package com.hitech.pickit.media.presentation.models
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.LoadingIndicator
@@ -15,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.hitech.pickit.media.data.datasource.remote.mappers.toUserMessage
 import com.hitech.pickit.media.presentation.models.base.BaseViewModel
-import com.hitech.pickit.media.presentation.utili.UiState
-import com.hitech.pickit.media.presentation.utili.components.ErrorScreen
+import com.hitech.pickit.media.presentation.util.UiState
+import com.hitech.pickit.media.presentation.util.components.ErrorScreen
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

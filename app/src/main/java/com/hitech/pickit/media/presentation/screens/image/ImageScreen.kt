@@ -51,9 +51,9 @@ import com.hitech.pickit.media.domain.model.TMDbImage
 import com.hitech.pickit.media.domain.model.TMDbItemDetails
 import com.hitech.pickit.media.presentation.models.TMDbItem
 import com.hitech.pickit.media.presentation.screens.detail_screen.BaseDetailViewModel
-import com.hitech.pickit.media.presentation.utili.Spacing
-import com.hitech.pickit.media.presentation.utili.UiState
-import com.hitech.pickit.media.presentation.utili.components.ErrorScreen
+import com.hitech.pickit.media.presentation.util.Spacing
+import com.hitech.pickit.media.presentation.util.UiState
+import com.hitech.pickit.media.presentation.util.components.ErrorScreen
 
 @OptIn(
     ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class,

@@ -10,7 +10,7 @@ import com.hitech.pickit.media.presentation.models.Actor
 import com.hitech.pickit.media.presentation.models.Credit
 import com.hitech.pickit.media.presentation.models.TMDbItem
 import com.hitech.pickit.media.presentation.screens.detail_screen.BaseDetailViewModel
-import com.hitech.pickit.media.presentation.utili.UiState
+import com.hitech.pickit.media.presentation.util.UiState
 import kotlin.collections.emptyList
 
 @Composable

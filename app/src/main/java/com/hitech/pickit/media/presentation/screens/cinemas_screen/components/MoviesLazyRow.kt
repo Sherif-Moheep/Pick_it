@@ -26,7 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hitech.pickit.R
 import com.hitech.pickit.media.presentation.screens.BOOK_list.components.MoviePreview
-import com.hitech.pickit.media.presentation.utili.MovieState
+import com.hitech.pickit.media.presentation.util.MovieState
 
 @Composable
 fun MoviesLazyRow(

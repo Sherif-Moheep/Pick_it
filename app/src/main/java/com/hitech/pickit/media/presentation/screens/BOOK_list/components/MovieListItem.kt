@@ -35,7 +35,7 @@ import com.hitech.pickit.media.domain.model.Movie
 import com.hitech.pickit.core.presentation.theme.PickItTheme
 import com.hitech.pickit.media.presentation.models.TMDbUi
 import com.hitech.pickit.media.presentation.models.toTMDbUi
-import com.hitech.pickit.media.presentation.utili.components.rate.StarsRate
+import com.hitech.pickit.media.presentation.util.components.rate.StarsRate
 
 
 @Composable
