@@ -70,10 +70,4 @@ abstract class MediaModule {
     abstract fun bindTVShowFeedRepository(
         impl: TVShowFeedRepository
     ): BaseFeedRepository<TVShow>
-
-    @Binds
-    @Singleton
-    abstract fun bindProfileRepository(
-        impl: ProfileRepositoryImpl
-    ): ProfileRepository
 }
